@@ -35,7 +35,7 @@ def get_db():
         """
         # TODO: Connection Pooling
         # Set the maximum connection pool size to 50 active connections
-        db = g._database = MongoClient(MFLIX_DB_URI)["mflix"]
+        db = g._database = MongoClient(MFLIX_DB_URI, maxPoolSize=50)["mflix"]
     return db
 
 
